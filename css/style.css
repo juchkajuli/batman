@@ -1,0 +1,384 @@
+body {
+    background-color:#0A090A ;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../img/main-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center; /* при изменении экрана картинка остается по центру сверху */
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    margin-bottom: 30%; /* удобно для адаптива */
+}
+.logo {
+    font-size: 24px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 900;
+}
+.search{
+    display: flex;
+    align-items: center;
+    flex: 0.8; /* резиновая */
+}
+.search-input {    
+background: rgba(196, 196, 196, 0.5);
+border-radius: 5px;
+width: 800px;
+height: 40px;
+padding: 12px 18px;
+border: none;
+color: #aeaeae;
+flex: 1; /* становятся резиновым */
+font-size: 14px;
+line-height: 16px;
+}
+::-webkit-input-placeholder { /* Chrome */
+    color: #aeaeae;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #aeaeae;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #aeaeae;
+    opacity: 1;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: #aeaeae;
+    opacity: 1;
+  }
+  .search-button {
+      background-color: transparent;
+      border: none;
+      padding: 10px 18px; /* увеличили кнопку */
+  }
+  .user {
+display: flex;
+align-items: center;
+}
+.avatar {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/avatar.jpeg');
+    border-radius:  50%;
+    object-fit: cover;  /* не растягивает, а равномерно заполняет область пространства */
+}
+/*  */
+.title {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    width: 175px;
+    height: 64px;
+    margin-bottom: 7px;
+}
+.title-en {
+display: inline-block;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+color: #787878;
+width: 108px;
+height: 23px;
+margin-bottom: 39px;
+}
+.short-info {
+    margin-right: 3%;
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 108px;
+}
+.movie-info {
+    display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.tag {
+background: #FFFFFF;
+border-radius: 3px;
+color: #333333;
+align-self: center;
+display: flex;
+flex-direction: row;
+padding: 5px 10px;
+margin-right: 20px;
+}
+.tag, .country, .play, .more{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+}
+.country {
+color: white;
+margin-right: 33px;
+}
+.play, .more {
+    color: #FFFFFF;
+    height: 19px;
+    margin-left: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.play::before {
+   margin-right: 15px;
+    content:'';
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/play.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.more::after {
+content: '';
+width: 30px;
+height: 30px;
+background-image: url('../img/play.svg');
+background-repeat: no-repeat;
+background-size: 100%;
+margin-left: 15px;
+transform: rotate(90deg); /* развернуть картинку на 90 градусов */
+}
+.content {
+    background-color: snow;
+    border-radius: 3px;
+    color: black;
+    padding: 3% 4%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    box-sizing: border-box;
+}
+.button-primary {
+    background: #FF8F27;
+    display: flex;
+flex-direction: row;
+padding: 10px 44px;
+color: white;
+font-family: Roboto;
+font-size: 14px;
+line-height: 16px;
+border: none;
+margin-top: 20px;
+}
+.actors-title {
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 150%;
+color: black;
+margin-top: 30px;
+padding-left: 15px;
+margin-bottom: 10px;
+}
+.list-actors {
+    font-family: Roboto;
+font-size: 16px;
+line-height: 150%;
+color: black;
+text-decoration-line: none;
+padding-left: 15px;
+margin: 0;
+}
+.poster {
+    display: block;
+}
+
+/* full-content */
+.full-content {
+    display: flex;
+    justify-content: space-between;
+}
+.full-info {
+    flex: 0.95;
+    margin-left: 20px;
+}
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+.tabs-content {
+    margin-right: 70px;
+    display: none;
+}
+.visible {
+    display: block;
+}
+.tabs-item {
+    color: black;
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+align-self: center;
+margin-right: 4%;
+text-decoration: none;
+margin-bottom: 30px;
+}
+.tabs-item:not(:last-child) {
+    margin-right: 4%;
+}
+.tabs-item-active {
+    color: #FF8F27;
+}
+.text {
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 140%;
+color: #000000;
+margin-bottom: 30px;
+margin-top: 0;
+}
+.text_title {
+    margin-top: 40px;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 140%;
+color: black;
+margin-bottom: 23px;
+}
+.subscribe-title {
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 150%;
+color: black;
+margin-bottom: 14px;
+margin-top: 0;
+}
+
+.subscribe-input {
+background: rgba(241, 241, 241, 0.5);
+border-radius: 5px;
+height: 40px;
+border: none;
+}
+.subscribe-form {
+    display: flex;
+    align-items: center;
+margin-bottom: 48px;
+}
+.subscribe-button {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    margin-left: -4px;
+}
+.subscribe-img-button {
+    height: 41px;
+    margin-top: -2px;
+}
+
+@media (max-width:1200px) {
+    .container {
+max-width: 960px;
+    }
+    .tabs-item {
+        font-size: 14px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 740px;
+    }
+    .tabs {
+flex-wrap: wrap; /* если элементы не помещаются в одну строк, то их надо перемещать */
+    }
+    .tabs-item {
+        flex-basis: 20%; /* ширина flex колонки */
+        line-height: 2; /*высота строки */
+    }
+    .full-content {
+        flex-wrap: wrap;
+    }
+    .tabs-content {
+        margin-bottom: 5%;
+    }
+    .text {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .more {
+        display: none;
+    }
+    .tabs-item {
+        flex-basis: 33%;
+        margin-bottom: 0;
+    }
+    .tabs-content {
+        margin-right: 0;
+    }
+    .search-input {
+       padding: 2%;
+       width: 20%;
+       height: 15%;
+    }
+}
+@media (max-width: 578px) {
+    .container {
+        max-width: 90%;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .search {
+       order: 3;
+        flex-basis: 100%;
+        margin-top: 5%;
+    }
+    .content {
+        flex-wrap: wrap;
+    }
+    .actors-title, .actors {
+        display: none;
+    }
+    .short-info {
+        margin-bottom: 4%;
+        margin-right: 0;
+    } 
+    .movie-info {
+        flex-wrap: wrap;
+    }
+    .play {
+        flex-basis: 100%;
+        margin-top: 10%;
+    }
+    .poster {
+        display: inline-block;
+        width: 100%;
+    }
+    .button-primary {
+        width: 100%;
+    }
+}
